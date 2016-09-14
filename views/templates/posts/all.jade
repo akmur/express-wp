@@ -1,0 +1,18 @@
+extends ../../layout
+
+block content
+  h1= title
+  ul.posts
+    each post in posts
+      li
+        a(href="./posts/" + post.slug)
+          h4= post.title.rendered
+
+  button#js-loadmore Load More
+
+  script(id="listing-template", type="text/x-handlebars-template")
+    | {{#each posts}}
+    |   <li>
+    |       <h4 class="entry-title"><a href="<?php bloginfo('url') ?>/posts/{{slug}}" data-id="{{id}}" rel="bookmark">{{title.rendered}}</a></h4>
+    |   </li>
+    | {{/each}}
