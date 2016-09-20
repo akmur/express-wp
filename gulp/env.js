@@ -9,7 +9,7 @@ var exports = {
 // Our folder for development and deploy.
 // -----------------------------------------------------------------------------
 exports.folder = {
-  dev: './public',
+  dist: './public',
   src: './public-src',
   tasks: './tasks'
 };

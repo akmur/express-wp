@@ -12,7 +12,7 @@ module.exports = function() {
     '!' + env.folder.src + '/assets',
     '!' + env.folder.src + '/assets/**/*'
   ])
-    .pipe(changed(env.folder.dev))
+    .pipe(changed(env.folder.dist))
     .pipe(debug({title: 'Copied files: '}))
-    .pipe(gulp.dest(env.folder.dev));
+    .pipe(gulp.dest(env.folder.dist));
 };

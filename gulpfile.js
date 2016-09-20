@@ -1,10 +1,14 @@
 // *****************************************************************
 // USEFUL TASKS
 // $ gulp compile -> Compile the development files
-// $ gulp -> Compile and start a local webserver + watcher
+// $ gulp -> Compile and start a local webserver + watcher + BrowserSync
 // $ gulp serve -> Just serve the local webserver
 //
-// NOTE: to get minified js and css run as gulp --js=minify --css=compressed
+// NOTE: to get minified js and css run any task with arguments
+// "--js=minify --css=compressed", Example:
+//
+// $ gulp --js=minify --css=compressed
+//
 // *****************************************************************
 
 

@@ -20,7 +20,7 @@ module.exports = function() {
   // Via yargs we will set if we are in distribution mode,
   // we will change directory, code output and we'll not generate sourcemaps
   env.sass.outputStyle = argv.css ? 'compressed' : 'nested';
-  var destination = argv.css ? env.folder.dist : env.folder.dev;
+  var destination = argv.css ? env.folder.dist : env.folder.dist;
 
   return gulp.src([
       env.folder.src + '/styles/main.scss',

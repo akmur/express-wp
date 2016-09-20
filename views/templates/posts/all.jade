@@ -13,6 +13,6 @@ block content
   script(id="listing-template", type="text/x-handlebars-template")
     | {{#each posts}}
     |   <li>
-    |       <h4 class="entry-title"><a href="<?php bloginfo('url') ?>/posts/{{slug}}" data-id="{{id}}" rel="bookmark">{{title.rendered}}</a></h4>
+    |       <h4 class="entry-title"><a href="./posts/{{slug}}" data-id="{{id}}" rel="bookmark">{{title.rendered}}</a></h4>
     |   </li>
     | {{/each}}

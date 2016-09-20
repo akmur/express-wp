@@ -21,5 +21,5 @@ module.exports = function() {
     .pipe(concat('main.js'))
     .pipe(gulpif( (argv.js === 'minify'), uglify()))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(env.folder.dev + '/scripts/'));
+    .pipe(gulp.dest(env.folder.dist + '/scripts/'));
 };

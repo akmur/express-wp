@@ -12,7 +12,7 @@ var re = /(?:\.([^.]+))?$/;
 function watchFunc(vinyl) {
   var extension = re.exec(vinyl.relative)[0];
   var fileOriginal = vinyl.relative.replace(extension, '');
-  var fileCompiled = env.folder.dev + '/' + fileOriginal;
+  var fileCompiled = env.folder.dist + '/' + fileOriginal;
 
   switch (extension) {
 
@@ -59,9 +59,9 @@ function watchFunc(vinyl) {
     case '.json':
     case '.woff':
       if(vinyl.event == 'unlink') {
-        del(env.folder.dev + '/' + vinyl.relative)
+        del(env.folder.dist + '/' + vinyl.relative)
         util.log(util.colors.yellow(
-          env.folder.dev + '/' + vinyl.relative + 'DELETED'
+          env.folder.dist + '/' + vinyl.relative + 'DELETED'
         ));
       }
       sequence('copy');
